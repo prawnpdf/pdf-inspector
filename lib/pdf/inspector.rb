@@ -14,7 +14,7 @@ module PDF
     end         
     
     def self.analyze_file(filename,*args,&block)
-      analyze(File.open(filenmame, "rb") { |f| f.read },*args,&block)
+      analyze(File.open(filename, "rb") { |f| f.read },*args,&block)
     end  
     
     def self.parse(obj)
