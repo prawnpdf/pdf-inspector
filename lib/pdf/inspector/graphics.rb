@@ -75,6 +75,19 @@ module PDF
         end
       end 
       
+      class Dash < Inspector
+        attr_reader :stroke_dash, :stroke_dash_count
+
+        def initialize
+          @stroke_dash_count = 0
+        end
+
+        def set_line_dash(*params)
+          @stroke_dash_count += 1
+          @stroke_dash = params
+        end
+      end
+
     end                                
   end
 end
