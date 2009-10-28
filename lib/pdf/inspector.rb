@@ -2,6 +2,7 @@ require "rubygems"
 require "pdf/reader"
 require "pdf/inspector/text" 
 require "pdf/inspector/xobject"
+require "pdf/inspector/extgstate"
 require "pdf/inspector/graphics"
 require "pdf/inspector/page"
 
