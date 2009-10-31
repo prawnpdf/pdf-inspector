@@ -87,7 +87,33 @@ module PDF
           @stroke_dash = params
         end
       end
+      
+      class CapStyle < Inspector
+        attr_reader :cap_style, :cap_style_count
 
+        def initialize
+          @cap_style_count = 0
+        end
+
+        def set_line_cap_style(*params)
+          @cap_style_count += 1
+          @cap_style = params[0]
+        end
+      end
+      
+      class JoinStyle < Inspector
+        attr_reader :join_style, :join_style_count
+
+        def initialize
+          @join_style_count = 0
+        end
+
+        def set_line_join_style(*params)
+          @join_style_count += 1
+          @join_style = params[0]
+        end
+      end
+      
     end                                
   end
 end
