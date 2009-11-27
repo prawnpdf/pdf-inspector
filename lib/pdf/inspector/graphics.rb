@@ -64,12 +64,12 @@ module PDF
           @fill_color_count   = 0
         end
 
-        def set_color_for_stroking_and_special(*params)
+        def set_rgb_color_for_stroking(*params)    
           @stroke_color_count += 1
           @stroke_color = params
         end
 
-        def set_color_for_nonstroking_and_special(*params)
+        def set_rgb_color_for_nonstroking(*params) 
           @fill_color_count += 1
           @fill_color = params
         end
