@@ -114,6 +114,18 @@ module PDF
         end
       end
       
+      class Matrix < Inspector
+        attr_reader :matrices
+
+        def initialize
+          @matrices = []
+        end
+
+        def concatenate_matrix(*values)
+          @matrices << values
+        end
+      end
+      
     end                                
   end
 end
