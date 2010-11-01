@@ -57,11 +57,12 @@ module PDF
       
       class Color < Inspector
         attr_reader :stroke_color, :fill_color, :stroke_color_count, 
-                    :fill_color_count
-
+                    :fill_color_count, :stroke_color_space_count, :color_space
+                    
         def initialize
           @stroke_color_count = 0
           @fill_color_count   = 0
+          @stroke_color_space_count   = 0
         end
 
         def set_color_for_stroking_and_special(*params)
@@ -73,6 +74,12 @@ module PDF
           @fill_color_count += 1
           @fill_color = params
         end
+        
+        def set_stroke_color_space(*params)
+          @stroke_color_space_count += 1
+          @color_space = params[0]
+        end
+
       end 
       
       class Dash < Inspector
@@ -123,6 +130,23 @@ module PDF
 
         def concatenate_matrix(*values)
           @matrices << values
+        end
+      end
+      
+      class State < Inspector
+        attr_reader :save_graphics_state_count, :restore_graphics_state_count
+
+        def initialize
+          @save_graphics_state_count    = 0
+          @restore_graphics_state_count = 0 
+        end
+        
+        def save_graphics_state(*values)
+          @save_graphics_state_count += 1
+        end
+
+        def restore_graphics_state(*values)
+          @restore_graphics_state_count += 1
         end
       end
       
