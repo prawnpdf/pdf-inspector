@@ -3,7 +3,7 @@ module PDF
     class Text < Inspector                    
       attr_accessor :font_settings, :size, :strings
       attr_accessor :character_spacing, :word_spacing
-      attr_accessor :kerned
+      attr_accessor :kerned, :text_rendering_mode
 
       def initialize     
         @font_settings = []
@@ -12,6 +12,7 @@ module PDF
         @character_spacing = []
         @word_spacing = []
         @kerned = []
+        @text_rendering_mode = []
       end
 
       def resource_font(*params)
@@ -31,6 +32,10 @@ module PDF
         @kerned << true
         # ignore kerning information
         @strings << params[0].reject { |e| Numeric === e }.join
+      end
+
+      def set_text_rendering_mode(*params)
+        @text_rendering_mode << params[0]
       end
 
       def set_character_spacing(*params)
