@@ -62,7 +62,7 @@ module PDF
         def initialize
           @stroke_color_count = 0
           @fill_color_count   = 0
-          @stroke_color_space_count   = 0
+          @stroke_color_space_count   = {:DeviceCMYK => 0, :DeviceRGB => 0}
         end
 
         def set_color_for_stroking_and_special(*params)
@@ -76,7 +76,7 @@ module PDF
         end
         
         def set_stroke_color_space(*params)
-          @stroke_color_space_count += 1
+          @stroke_color_space_count[params[0]] += 1
           @color_space = params[0]
         end
 
