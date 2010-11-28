@@ -149,7 +149,20 @@ module PDF
           @restore_graphics_state_count += 1
         end
       end
+
+      class Pattern < Inspector
+        attr_reader :patterns
+
+        def initialize
+          super
+          @patterns = {}
+        end
+
+        def resource_pattern(name, dict)
+          @patterns[name] = dict
+        end
+      end
       
-    end                                
+    end
   end
 end
