@@ -4,7 +4,6 @@ Gem::Specification.new do |spec|
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A tool for analyzing PDF output"
   spec.files =  Dir.glob("{lib}/**/**/*")
-  spec.has_rdoc = true
   spec.extra_rdoc_files = %w{CHANGELOG README}
   spec.rdoc_options << '--title' << 'PDF::Inspector' <<
                        '--main'  << 'README' << '-q'
