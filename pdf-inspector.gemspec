@@ -3,6 +3,7 @@ Gem::Specification.new do |spec|
   spec.version = "1.0.0"
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A tool for analyzing PDF output"
+  spec.homepage = "https://github.com/sandal/pdf-inspector"
   spec.files =  Dir.glob("{lib}/**/**/*")
   spec.extra_rdoc_files = %w{CHANGELOG README}
   spec.rdoc_options << '--title' << 'PDF::Inspector' <<
