@@ -13,13 +13,6 @@ The recommended installation method is via Rubygems.
 
   gem install pdf-inspector
 
-= Maintainers
-
-- Brad Ediger
-- Daniel Nelson
-- Jonathan Greenberg
-- James Healy
-
 = Licensing
 
 Matz’s terms for Ruby, GPLv2, or GPLv3. See LICENSING for details. 
@@ -32,6 +25,18 @@ library.
 Any questions or feedback should be sent to the Prawn google group.
 
 http://groups.google.com/group/prawn-ruby
+
+= Authorship
+
+pdf-inspector was originally developed by Gregory Brown as part of the Prawn[1]
+project. In 2010, Gregory officially handed the project off to the Prawn core
+team. Currently active maintainers include Brad Ediger, Daniel Nelson, James
+Healy, and Jonathan Greenberg.
+
+You can find the full list of Github users who have at least one patch accepted
+to pdf-inspector at:
+
+  https://github.com/sandal/pdf-inspector/contributors
 
 = References
 
