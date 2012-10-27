@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name = "pdf-inspector"
-  spec.version = "1.0.0"
+  spec.version = "1.0.2"
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A tool for analyzing PDF output"
   spec.homepage = "https://github.com/sandal/pdf-inspector"

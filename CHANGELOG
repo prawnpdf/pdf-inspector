@@ -1,2 +1,7 @@
+v1.0.2 (27 October 2012)
+* Add soft mask support
+
+v1.0.1
+
 v1.0.0 (13 August 2011)
 * initial release as a standalone gem
