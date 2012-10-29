@@ -3,7 +3,7 @@ Gem::Specification.new do |spec|
   spec.version = "1.0.2"
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A tool for analyzing PDF output"
-  spec.homepage = "https://github.com/sandal/pdf-inspector"
+  spec.homepage = "https://github.com/prawnpdf/pdf-inspector"
   spec.files =  Dir.glob("{lib}/**/**/*") +
     ["CHANGELOG", "README", "COPYING", "LICENSE", "GPLv2", "GPLv3"]
   spec.extra_rdoc_files = %w{CHANGELOG README}
@@ -24,6 +24,6 @@ However, it may be useful to others, so we have made it available as a gem in
 its own right.
 
 [0] https://github.com/yob/pdf-reader
-[1] https://github.com/sandal/prawn
+[1] https://github.com/prawnpdf/prawn
 END_DESC
 end
