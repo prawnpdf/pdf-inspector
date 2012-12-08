@@ -158,8 +158,10 @@ module PDF
           @patterns = {}
         end
 
-        def resource_pattern(name, dict)
-          @patterns[name] = dict
+        def page=(page)
+          page.patterns.each do |label, stream|
+            @patterns[label] = stream
+          end
         end
       end
       
