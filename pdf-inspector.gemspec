@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.email = ["gregory.t.brown@gmail.com","brad@bradediger.com",
                 "dnelson77@gmail.com", "greenberg@entryway.net",
                 "jimmy@deefa.com"]
-  spec.add_dependency('pdf-reader', '>=0.9.0')
+  spec.add_dependency('pdf-reader', '~>1.0')
   spec.description = <<END_DESC
 This library provides a number of PDF::Reader[0] based tools for use in testing
 PDF output.  Presently, the primary purpose of this tool is to support the
