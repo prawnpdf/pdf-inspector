@@ -8,17 +8,11 @@ module PDF
         @xobject_streams = {}
       end
 
-      def resource_xobject(*params)
-        @page_xobjects.last << params.first
-        store_streams(params.first, params.last)
-      end
-
-      def begin_page(*params)
-        @page_xobjects << [] 
-      end
-      
-      def store_streams(resource_name, stream)
-        @xobject_streams[resource_name] = stream
+      def page=(page)
+        @page_xobjects << page.xobjects
+        page.xobjects.each do |label, stream|
+          @xobject_streams[label] = stream
+        end
       end
     end
   end
