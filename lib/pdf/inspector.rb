@@ -5,17 +5,27 @@ require "pdf/inspector/xobject"
 require "pdf/inspector/extgstate"
 require "pdf/inspector/graphics"
 require "pdf/inspector/page"
+require "stringio"
 
 module PDF
   class Inspector
     def self.analyze(output,*args,&block) 
+      if output.is_a?(String)
+        output = StringIO.new(output)
+      end
       obs = self.new(*args, &block)
-      PDF::Reader.string(output,obs)
+      PDF::Reader.open(output) do |reader|
+        reader.pages.each do |page|
+          page.walk(obs)
+        end
+      end
       obs  
     end         
     
     def self.analyze_file(filename,*args,&block)
-      analyze(File.open(filename, "rb") { |f| f.read },*args,&block)
+      File.open(filename, "rb") do |io|
+        analyze(io, *args,&block)
+      end
     end  
     
     def self.parse(obj)

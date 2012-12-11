@@ -1,23 +1,34 @@
+require 'forwardable'
+
 module PDF
   class Inspector
     class Page < Inspector
+      extend Forwardable
+
       attr_reader :pages
+
+      def_delegators :@state, :set_text_font_and_size
       
       def initialize
         @pages = []
       end
 
-      def begin_page(params)
-        @pages << {:size => params[:MediaBox][-2..-1], :strings => []}
+      def page=(page)
+        @pages << {:size => page.attributes[:MediaBox][-2..-1], :strings => []}
+        @state = PDF::Reader::PageState.new(page)
       end                       
 
       def show_text(*params)
-        @pages.last[:strings] << params[0]
+        params.each do |param|
+          @pages.last[:strings] << @state.current_font.to_utf8(param)
+        end
       end
 
       def show_text_with_positioning(*params)      
         # ignore kerning information
-        @pages.last[:strings] << params[0].reject { |e| Numeric === e }.join
+        show_text params[0].reject { |e|
+          Numeric === e
+        }.join
       end
       
     end   

@@ -7,12 +7,14 @@ module PDF
         @extgstates = []
       end
 
-      def resource_extgstate(*params)
-        @extgstates << {
-                        :opacity => params[1][:ca],
-                        :stroke_opacity => params[1][:CA],
-                        :soft_mask => params[1][:SMask]
-                        }
+      def page=(page)
+        page.graphic_states.each do |label, stream|
+          @extgstates << {
+                          :opacity => stream[:ca],
+                          :stroke_opacity => stream[:CA],
+                          :soft_mask => stream[:SMask]
+                          }
+        end
       end
     end
   end
