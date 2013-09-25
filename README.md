@@ -23,6 +23,27 @@ group :test do
 end
 ```
 
+## Usage
+
+Check for text in the generated PDF:
+
+```ruby
+rendered_pdf = your_pdf_document.render
+text_analysis = PDF::Inspector::Text.analyze(rendered_pdf)
+text_analysis.strings.should include("foo")
+```
+
+Note that `strings` is more like a list of words, and any string with a hyphen will be split up as two different
+entries.
+
+Check number of pages
+
+```
+rendered_pdf = your_pdf_document.render
+page_analysis = PDF::Inspector::Page.analyze(rendered_pdf)
+page_analysis.pages.size.should == 2
+```
+
 ## Licensing
 
 Matz’s terms for Ruby, GPLv2, or GPLv3. See LICENSE for details. 
