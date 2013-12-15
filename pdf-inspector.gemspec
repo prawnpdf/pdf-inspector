@@ -5,10 +5,10 @@ Gem::Specification.new do |spec|
   spec.summary = "A tool for analyzing PDF output"
   spec.homepage = "https://github.com/prawnpdf/pdf-inspector"
   spec.files =  Dir.glob("{lib}/**/**/*") +
-    ["CHANGELOG", "README", "COPYING", "LICENSE", "GPLv2", "GPLv3"]
-  spec.extra_rdoc_files = %w{CHANGELOG README}
+    ["CHANGELOG", "README.md", "COPYING", "LICENSE", "GPLv2", "GPLv3"]
+  spec.extra_rdoc_files = %w{CHANGELOG README.md}
   spec.rdoc_options << '--title' << 'PDF::Inspector' <<
-                       '--main'  << 'README' << '-q'
+                       '--main'  << 'README.md' << '-q'
   spec.authors = ["Gregory Brown","Brad Ediger", "Daniel Nelson",
                   "Jonathan Greenberg","James Healy"]
   spec.email = ["gregory.t.brown@gmail.com","brad@bradediger.com",
