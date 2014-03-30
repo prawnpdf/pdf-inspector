@@ -1,7 +1,7 @@
 module PDF
   class Inspector
     class Text < Inspector                    
-      attr_accessor :font_settings, :size, :strings
+      attr_accessor :font_settings, :size, :strings, :full_text
       attr_accessor :character_spacing, :word_spacing
       attr_accessor :kerned, :text_rendering_mode
 
@@ -10,6 +10,7 @@ module PDF
         @fonts = {}
         @font_objects = {}
         @strings = []
+        @full_text = ""
         @character_spacing = []
         @word_spacing = []
         @kerned = []
@@ -32,6 +33,7 @@ module PDF
       def show_text(*params)
         @kerned << false
         @strings << @state.current_font.to_utf8(params[0])
+        @full_text += (" " + @state.current_font.to_utf8(params[0]))
       end
 
       def show_text_with_positioning(*params)      

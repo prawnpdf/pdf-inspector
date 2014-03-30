@@ -33,8 +33,14 @@ text_analysis = PDF::Inspector::Text.analyze(rendered_pdf)
 text_analysis.strings.should include("foo")
 ```
 
+or 
+
+```ruby
+text_analysis.full_text.index("foo").should_not be_nil
+```
+
 Note that `strings` is more like a list of words, and any string with a hyphen will be split up as two different
-entries.
+entries. `full_text` returns a string that approximates the full text of the document. 
 
 Check number of pages
 
