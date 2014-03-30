@@ -50,7 +50,7 @@ module PDF
       end
 
       def set_character_spacing(*params)
-        @state.set_character_sp5acing(*params)
+        @state.set_character_spacing(*params)
         @character_spacing << params[0]
       end
 
