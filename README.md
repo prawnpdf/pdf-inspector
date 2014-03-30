@@ -33,9 +33,6 @@ text_analysis = PDF::Inspector::Text.analyze(rendered_pdf)
 text_analysis.strings.should include("foo")
 ```
 
-Note that `strings` is more like a list of words, and any string with a hyphen will be split up as two different
-entries.
-
 Check number of pages
 
 ```
