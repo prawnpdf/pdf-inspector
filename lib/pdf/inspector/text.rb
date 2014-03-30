@@ -1,7 +1,7 @@
 module PDF
   class Inspector
     class Text < Inspector                    
-      attr_accessor :font_settings, :size, :strings
+      attr_accessor :font_settings, :size, :strings, :full_text
       attr_accessor :character_spacing, :word_spacing
       attr_accessor :kerned, :text_rendering_mode
 
