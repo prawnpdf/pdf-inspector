@@ -33,6 +33,8 @@ text_analysis = PDF::Inspector::Text.analyze(rendered_pdf)
 text_analysis.strings.should include("foo")
 ```
 
+Note that ```strings``` returns an array containing one string for each text drawing operation in the PDF. As a result, sentences and paragraphs will often be returned in fragments. To test for the presence of a complete sentence or a longer string, join the array together with an operation like ```full_text = text_analysis.strings.join(" ")```.
+
 Check number of pages
 
 ```
