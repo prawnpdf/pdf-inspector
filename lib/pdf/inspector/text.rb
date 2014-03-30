@@ -10,6 +10,7 @@ module PDF
         @fonts = {}
         @font_objects = {}
         @strings = []
+        @full_text = ""
         @character_spacing = []
         @word_spacing = []
         @kerned = []
@@ -32,6 +33,7 @@ module PDF
       def show_text(*params)
         @kerned << false
         @strings << @state.current_font.to_utf8(params[0])
+        @full_text += (" " + @state.current_font.to_utf8(params[0]))
       end
 
       def show_text_with_positioning(*params)      
@@ -48,7 +50,7 @@ module PDF
       end
 
       def set_character_spacing(*params)
-        @state.set_character_spacing(*params)
+        @state.set_character_sp5acing(*params)
         @character_spacing << params[0]
       end
 
