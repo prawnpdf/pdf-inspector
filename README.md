@@ -1,8 +1,8 @@
 # PDF::Inspector : A tool for analyzing PDF output
 
-This library provides a number of PDF::Reader[0] based tools for use in testing
+This library provides a number of [PDF::Reader][0] based tools for use in testing
 PDF output.  Presently, the primary purpose of this tool is to support the
-tests found in Prawn[1], a pure Ruby PDF generation library.
+tests found in [Prawn][1], a pure Ruby PDF generation library.
 
 However, it may be useful to others, so we have made it available as a gem in
 its own right.
@@ -15,7 +15,7 @@ The recommended installation method is via Rubygems.
 gem install pdf-inspector
 ```
 
-Or put this in your Gemfile, if you use Bundler[2]:
+Or put this in your Gemfile, if you use [Bundler][2]:
 
 ```ruby
 group :test do
@@ -45,7 +45,7 @@ page_analysis.pages.size.should == 2
 
 ## Licensing
 
-Matz’s terms for Ruby, GPLv2, or GPLv3. See LICENSE for details. 
+Matz’s terms for Ruby, GPLv2, or GPLv3. See LICENSE for details.
 
 ## Mailing List
 
@@ -54,7 +54,7 @@ library.
 
 Any questions or feedback should be sent to the Prawn google group.
 
-[http://groups.google.com/group/prawn-ruby](http://groups.google.com/group/prawn-ruby)
+[http://groups.google.com/group/prawn-ruby][3]
 
 ## Authorship
 
@@ -66,10 +66,12 @@ Healy, and Jonathan Greenberg.
 You can find the full list of Github users who have at least one patch accepted
 to pdf-inspector at:
 
-[https://github.com/sandal/pdf-inspector/contributors](https://github.com/sandal/pdf-inspector/contributors)
+[https://github.com/sandal/pdf-inspector/contributors][4]
 
 ## References
 
 [0]: http://github.com/yob/pdf-reader
 [1]: http://github.com/sandal/prawn
 [2]: http://gembundler.com/
+[3]: http://groups.google.com/group/prawn-ruby
+[4]: https://github.com/sandal/pdf-inspector/contributors
