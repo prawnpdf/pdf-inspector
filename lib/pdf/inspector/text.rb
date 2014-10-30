@@ -3,7 +3,7 @@ module PDF
     class Text < Inspector                    
       attr_accessor :font_settings, :size, :strings
       attr_accessor :character_spacing, :word_spacing
-      attr_accessor :kerned, :text_rendering_mode
+      attr_accessor :kerned, :text_rendering_mode, :positions
 
       def initialize     
         @font_settings = []
@@ -14,6 +14,7 @@ module PDF
         @word_spacing = []
         @kerned = []
         @text_rendering_mode = []
+        @positions = []
       end
 
       def page=(page)
@@ -28,6 +29,10 @@ module PDF
         @state.set_text_font_and_size(*params)
         @font_settings << { :name => @fonts[params[0]], :size => params[1] }
       end     
+
+      def move_text_position(tx, ty)
+        @positions << [tx, ty]
+      end
 
       def show_text(*params)
         @kerned << false
