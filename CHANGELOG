@@ -1,3 +1,7 @@
+v1.2.0 (30 October 2014)
+
+* Added PDF::Inspector::Text#positions to capture `Td` operations.
+
 v1.1.0 (8th April 2013)
 * Update to use the pdf-reader 1.0 APIs. No changes to the pdf-inspector
   API
