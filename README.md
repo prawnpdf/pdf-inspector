@@ -49,7 +49,7 @@ Matz’s terms for Ruby, GPLv2, or GPLv3. See LICENSE for details.
 
 ## Mailing List
 
-pdf-inspector is maintaiend as a dependency of prawn, the ruby PDF generation
+pdf-inspector is maintained as a dependency of prawn, the ruby PDF generation
 library.
 
 Any questions or feedback should be sent to the Prawn google group.
