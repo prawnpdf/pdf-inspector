@@ -12,7 +12,8 @@ module PDF
           @extgstates << {
                           :opacity => stream[:ca],
                           :stroke_opacity => stream[:CA],
-                          :soft_mask => stream[:SMask]
+                          :soft_mask => stream[:SMask],
+                          :blend_mode => stream[:BM]
                           }
         end
       end
