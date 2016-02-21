@@ -4,6 +4,7 @@ module PDF
       attr_accessor :font_settings, :size, :strings
       attr_accessor :character_spacing, :word_spacing
       attr_accessor :kerned, :text_rendering_mode, :positions
+      attr_accessor :horizontal_text_scaling
 
       def initialize     
         @font_settings = []
@@ -15,6 +16,7 @@ module PDF
         @kerned = []
         @text_rendering_mode = []
         @positions = []
+        @horizontal_text_scaling = []
       end
 
       def page=(page)
@@ -62,6 +64,11 @@ module PDF
         @word_spacing << params[0]
       end
       
+      def set_horizontal_text_scaling(*params)
+        @state.set_horizontal_text_scaling(*params)
+        @horizontal_text_scaling << params[0]
+      end
+
     end                                       
   end
 end
