@@ -54,9 +54,9 @@ module PDF
         @text_rendering_mode << params[0]
       end
 
-      def set_character_spacing(*params)
-        @state.set_character_spacing(*params)
-        @character_spacing << params[0]
+      def set_character_spacing(spacing)
+        @state.set_character_spacing(spacing)
+        @character_spacing << spacing
       end
 
       def set_word_spacing(*params)
@@ -64,9 +64,9 @@ module PDF
         @word_spacing << params[0]
       end
       
-      def set_horizontal_text_scaling(*params)
-        @state.set_horizontal_text_scaling(*params)
-        @horizontal_text_scaling << params[0]
+      def set_horizontal_text_scaling(scaling)
+        @state.set_horizontal_text_scaling(scaling)
+        @horizontal_text_scaling << scaling
       end
 
     end                                       
