@@ -1,5 +1,7 @@
 # PDF::Inspector : A tool for analyzing PDF output
 
+![Maintained: yes](https://img.shields.io/badge/maintained-yes-brightgreen.png)
+
 This library provides a number of [PDF::Reader][0] based tools for use in testing
 PDF output.  Presently, the primary purpose of this tool is to support the
 tests found in [Prawn][1], a pure Ruby PDF generation library.
