@@ -73,7 +73,7 @@ to pdf-inspector at:
 ## References
 
 [0]: http://github.com/yob/pdf-reader
-[1]: http://github.com/sandal/prawn
+[1]: http://github.com/prawnpdf/prawn
 [2]: http://gembundler.com/
 [3]: http://groups.google.com/group/prawn-ruby
 [4]: https://github.com/sandal/pdf-inspector/contributors
