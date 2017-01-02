@@ -1,0 +1,45 @@
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '*.gemspec'
+  Exclude:
+    - 'pkg/**/*'
+
+# These cops need to remain disabled for valid reasons on this code base
+
+# set_ methods are the part of PDF::Reader API
+Style/AccessorMethodName:
+  Enabled: false
+
+# We need to reference non-ascii characters when testing and explaining
+# behavior related to win-1252, UTF-8 and UTF-16 encodings for example.
+Style/AsciiComments:
+  Enabled: false
+
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+
+Style/Documentation:
+  Enabled: false
+
+# We don't always prefer modified if statements even if they do fit on
+# a line.
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  Exclude:
+    - prawn.gemspec
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%': '()'
+    '%i': '[]'
+    '%I': '[]'
+    '%q': '()'
+    '%Q': '()'
+    '%r': '{}'
+    '%s': '()'
+    '%w': '[]'
+    '%W': '[]'
+    '%x': '()'

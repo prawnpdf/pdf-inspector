@@ -1,12 +1,12 @@
 module PDF
   class Inspector
-    class Text < Inspector                    
+    class Text < Inspector
       attr_accessor :font_settings, :size, :strings
       attr_accessor :character_spacing, :word_spacing
       attr_accessor :kerned, :text_rendering_mode, :positions
       attr_accessor :horizontal_text_scaling
 
-      def initialize     
+      def initialize
         @font_settings = []
         @fonts = {}
         @font_objects = {}
@@ -27,10 +27,10 @@ module PDF
         end
       end
 
-      def set_text_font_and_size(*params)     
+      def set_text_font_and_size(*params)
         @state.set_text_font_and_size(*params)
-        @font_settings << { :name => @fonts[params[0]], :size => params[1] }
-      end     
+        @font_settings << { name: @fonts[params[0]], size: params[1] }
+      end
 
       def move_text_position(tx, ty)
         @positions << [tx, ty]
@@ -41,11 +41,11 @@ module PDF
         @strings << @state.current_font.to_utf8(params[0])
       end
 
-      def show_text_with_positioning(*params)      
+      def show_text_with_positioning(*params)
         @kerned << true
         # ignore kerning information
         show_text params[0].reject { |e|
-          Numeric === e
+          e.is_a? Numeric
         }.join
       end
 
@@ -63,12 +63,11 @@ module PDF
         @state.set_word_spacing(*params)
         @word_spacing << params[0]
       end
-      
+
       def set_horizontal_text_scaling(scaling)
         @state.set_horizontal_text_scaling(scaling)
         @horizontal_text_scaling << scaling
       end
-
-    end                                       
+    end
   end
 end

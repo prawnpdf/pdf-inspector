@@ -1,24 +1,25 @@
-require "bundler"
+require 'bundler'
 Bundler.setup
 
 require 'rake'
 require 'rspec/core/rake_task'
 require 'rubygems/package_task'
+require 'rubocop/rake_task'
 
-task :default => [:spec]
+task default: [:spec, :rubocop]
 
-desc "Run all rspec files"
-RSpec::Core::RakeTask.new("spec") do |c|
-  c.rspec_opts = "-t ~unresolved"
+desc 'Run all rspec files'
+RSpec::Core::RakeTask.new('spec') do |c|
+  c.rspec_opts = '-t ~unresolved'
 end
 
-spec = Gem::Specification.load "pdf-inspector.gemspec"
+spec = Gem::Specification.load 'pdf-inspector.gemspec'
 Gem::PackageTask.new(spec) do |pkg|
   pkg.need_zip = true
   pkg.need_tar = true
 end
 
-desc "Run a console with Prawn loaded"
+desc 'Run a console with Prawn loaded'
 task :console do
   require 'irb'
   require 'irb/completion'
@@ -33,3 +34,5 @@ YARD::Rake::YardocTask.new do |t|
   t.options = ['--output-dir', 'doc/html']
 end
 task docs: :yard
+
+RuboCop::RakeTask.new
