@@ -27,3 +27,9 @@ task :console do
   ARGV.clear
   IRB.start
 end
+
+require 'yard'
+YARD::Rake::YardocTask.new do |t|
+  t.options = ['--output-dir', 'doc/html']
+end
+task docs: :yard

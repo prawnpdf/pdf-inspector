@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('bundler')
   spec.add_development_dependency('rake')
   spec.add_development_dependency('rspec')
->>>>>>> 25a74ce... fixup! Add Rakefile with basic tasks
+  spec.add_development_dependency('yard')
   spec.description = <<END_DESC
 This library provides a number of PDF::Reader[0] based tools for use in testing
 PDF output.  Presently, the primary purpose of this tool is to support the
