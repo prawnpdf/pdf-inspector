@@ -4,6 +4,12 @@ Gem::Specification.new do |spec|
   spec.platform = Gem::Platform::RUBY
   spec.summary = 'A tool for analyzing PDF output'
   spec.homepage = 'https://github.com/prawnpdf/pdf-inspector'
+
+  spec.cert_chain = ['certs/pointlessone.pem']
+  if $PROGRAM_NAME.end_with? 'gem'
+    spec.signing_key = File.expand_path('~/.ssh/gem-private_key.pem')
+  end
+
   spec.files = Dir.glob('{lib}/**/**/*') +
                %w[CHANGELOG.md README.md COPYING LICENSE GPLv2 GPLv3]
   spec.extra_rdoc_files = %w[CHANGELOG.md README.md]
