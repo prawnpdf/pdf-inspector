@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
                 'dnelson77@gmail.com', 'greenberg@entryway.net',
                 'jimmy@deefa.com']
   spec.licenses = %w[PRAWN GPL-2.0 GPL-3.0]
-  spec.add_dependency('pdf-reader', '>=1.0', '< 3.0')
+  spec.add_dependency('pdf-reader', '>=1.0', '< 3.0.a')
   spec.add_development_dependency('bundler')
   spec.add_development_dependency('rake')
   spec.add_development_dependency('rspec')
