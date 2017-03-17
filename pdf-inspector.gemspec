@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name = 'pdf-inspector'
-  spec.version = '1.2.1'
+  spec.version = '1.3.0'
   spec.platform = Gem::Platform::RUBY
   spec.summary = 'A tool for analyzing PDF output'
   spec.homepage = 'https://github.com/prawnpdf/pdf-inspector'
