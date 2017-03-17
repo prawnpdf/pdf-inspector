@@ -5,6 +5,11 @@ AllCops:
   Exclude:
     - 'pkg/**/*'
 
+Metrics/BlockLength:
+  Exclude:
+    - pdf-inspector.gemspec
+
+
 # These cops need to remain disabled for valid reasons on this code base
 
 # set_ methods are the part of PDF::Reader API
