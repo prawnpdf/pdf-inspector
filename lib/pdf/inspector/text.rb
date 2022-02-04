@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PDF
   class Inspector
     class Text < Inspector
@@ -32,8 +34,8 @@ module PDF
         @font_settings << { name: @fonts[params[0]], size: params[1] }
       end
 
-      def move_text_position(tx, ty)
-        @positions << [tx, ty]
+      def move_text_position(transx, transy)
+        @positions << [transx, transy]
       end
 
       def show_text(*params)

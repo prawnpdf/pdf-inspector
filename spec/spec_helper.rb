@@ -1,4 +1,4 @@
-# encoding: utf-8
+# frozen_string_literal: true
 
 puts "PDF::Inspector specs: Running on Ruby Version: #{RUBY_VERSION}"
 
