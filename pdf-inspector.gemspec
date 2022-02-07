@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |spec|
   spec.name = 'pdf-inspector'
   spec.version = '1.3.0'
@@ -20,21 +22,25 @@ Gem::Specification.new do |spec|
                 'dnelson77@gmail.com', 'greenberg@entryway.net',
                 'jimmy@deefa.com']
   spec.licenses = %w[PRAWN GPL-2.0 GPL-3.0]
+  spec.required_ruby_version = '>= 2.5'
+
   spec.add_dependency('pdf-reader', '>=1.0', '< 3.0.a')
+
   spec.add_development_dependency('bundler')
   spec.add_development_dependency('rake')
   spec.add_development_dependency('rspec')
   spec.add_development_dependency('rubocop', '~> 0.46')
   spec.add_development_dependency('yard')
-  spec.description = <<END_DESC
-This library provides a number of PDF::Reader[0] based tools for use in testing
-PDF output.  Presently, the primary purpose of this tool is to support the
-tests found in Prawn[1], a pure Ruby PDF generation library.
 
-However, it may be useful to others, so we have made it available as a gem in
-its own right.
+  spec.description = <<~END_DESC
+    This library provides a number of PDF::Reader[0] based tools for use in testing
+    PDF output.  Presently, the primary purpose of this tool is to support the
+    tests found in Prawn[1], a pure Ruby PDF generation library.
 
-[0] https://github.com/yob/pdf-reader
-[1] https://github.com/prawnpdf/prawn
-END_DESC
+    However, it may be useful to others, so we have made it available as a gem in
+    its own right.
+
+    [0] https://github.com/yob/pdf-reader
+    [1] https://github.com/prawnpdf/prawn
+  END_DESC
 end

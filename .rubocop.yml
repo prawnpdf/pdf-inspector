@@ -1,9 +1,7 @@
 AllCops:
-  Include:
-    - '**/Rakefile'
-    - '*.gemspec'
   Exclude:
     - 'pkg/**/*'
+  TargetRubyVersion: 2.5
 
 Metrics/BlockLength:
   Exclude:
