@@ -1,7 +1,7 @@
 # PDF::Inspector: A tool for analyzing PDF output
 
 ![Maintained: yes](https://img.shields.io/badge/maintained-yes-brightgreen.svg)
-![Build status](https://travis-ci.org/prawnpdf/pdf-inspector.svg?branch=master)
+![Build status](https://github.com/prawnpdf/pdf-inspector/workflows/ci/badge.svg)
 
 This library provides a number of [PDF::Reader][0] based tools for use in
 testing PDF output.  Presently, the primary purpose of this tool is to support
