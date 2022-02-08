@@ -1,7 +1,5 @@
-AllCops:
-  Exclude:
-    - 'pkg/**/*'
-  TargetRubyVersion: 2.5
+inherit_gem:
+  prawn-dev: rubocop.yml
 
 Metrics/BlockLength:
   Exclude:

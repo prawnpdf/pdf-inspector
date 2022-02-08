@@ -9,6 +9,7 @@ module PDF
       attr_accessor :horizontal_text_scaling
 
       def initialize
+        super
         @font_settings = []
         @fonts = {}
         @font_objects = {}
@@ -24,7 +25,7 @@ module PDF
       def page=(page)
         @state = PDF::Reader::PageState.new(page)
         page.fonts.each do |label, stream|
-          @fonts[label]        = stream[:BaseFont]
+          @fonts[label] = stream[:BaseFont]
           @font_objects[label] = PDF::Reader::Font.new(page.objects, stream)
         end
       end

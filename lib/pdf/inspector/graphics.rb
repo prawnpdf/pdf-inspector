@@ -7,6 +7,7 @@ module PDF
         attr_accessor :points, :widths
 
         def initialize
+          super
           @points = []
           @widths = []
         end
@@ -28,6 +29,7 @@ module PDF
         attr_reader :rectangles
 
         def initialize
+          super
           @rectangles = []
         end
 
@@ -44,6 +46,7 @@ module PDF
         attr_reader :coords
 
         def initialize
+          super
           @coords = []
         end
 
@@ -57,10 +60,15 @@ module PDF
       end
 
       class Color < Inspector
-        attr_reader :stroke_color, :fill_color, :stroke_color_count,
-                    :fill_color_count, :stroke_color_space_count, :color_space
+        attr_reader :stroke_color,
+          :fill_color,
+          :stroke_color_count,
+          :fill_color_count,
+          :stroke_color_space_count,
+          :color_space
 
         def initialize
+          super
           @stroke_color_count = 0
           @fill_color_count = 0
           @stroke_color_space_count = { DeviceCMYK: 0, DeviceRGB: 0 }
@@ -86,6 +94,7 @@ module PDF
         attr_reader :stroke_dash, :stroke_dash_count
 
         def initialize
+          super
           @stroke_dash_count = 0
         end
 
@@ -99,6 +108,7 @@ module PDF
         attr_reader :cap_style, :cap_style_count
 
         def initialize
+          super
           @cap_style_count = 0
         end
 
@@ -112,6 +122,7 @@ module PDF
         attr_reader :join_style, :join_style_count
 
         def initialize
+          super
           @join_style_count = 0
         end
 
@@ -125,6 +136,7 @@ module PDF
         attr_reader :matrices
 
         def initialize
+          super
           @matrices = []
         end
 
@@ -137,7 +149,8 @@ module PDF
         attr_reader :save_graphics_state_count, :restore_graphics_state_count
 
         def initialize
-          @save_graphics_state_count    = 0
+          super
+          @save_graphics_state_count = 0
           @restore_graphics_state_count = 0
         end
 

@@ -3,10 +3,10 @@
 require_relative 'spec_helper'
 
 describe 'PDF::Inspector::Text' do
-  context '.analyze_file' do
+  describe '.analyze_file' do
     let(:contents) do
       PDF::Inspector::Text.analyze_file(
-        File.dirname(__FILE__) + '/fixtures/text.pdf'
+        "#{File.dirname(__FILE__)}/fixtures/text.pdf"
       )
     end
 
