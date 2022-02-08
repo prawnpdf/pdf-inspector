@@ -6,6 +6,7 @@ module PDF
       attr_accessor :page_xobjects, :xobject_streams
 
       def initialize
+        super
         @page_xobjects = []
         @xobject_streams = {}
       end

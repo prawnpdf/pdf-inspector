@@ -12,11 +12,12 @@ module PDF
       def_delegators :@state, :set_text_font_and_size
 
       def initialize
+        super
         @pages = []
       end
 
       def page=(page)
-        @pages << { size: page.attributes[:MediaBox][-2..-1], strings: [] }
+        @pages << { size: page.attributes[:MediaBox][-2..], strings: [] }
         @state = PDF::Reader::PageState.new(page)
       end
 

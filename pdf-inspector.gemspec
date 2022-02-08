@@ -13,23 +13,27 @@ Gem::Specification.new do |spec|
   end
 
   spec.files = Dir.glob('{lib}/**/**/*') +
-               %w[CHANGELOG.md README.md COPYING LICENSE GPLv2 GPLv3]
+    %w[CHANGELOG.md README.md COPYING LICENSE GPLv2 GPLv3]
   spec.extra_rdoc_files = %w[CHANGELOG.md README.md]
   spec.rdoc_options += %w[--title PDF::Inspector --main README.md -q]
-  spec.authors = ['Gregory Brown', 'Brad Ediger', 'Daniel Nelson',
-                  'Jonathan Greenberg', 'James Healy']
-  spec.email = ['gregory.t.brown@gmail.com', 'brad@bradediger.com',
-                'dnelson77@gmail.com', 'greenberg@entryway.net',
-                'jimmy@deefa.com']
+  spec.authors = [
+    'Gregory Brown', 'Brad Ediger', 'Daniel Nelson',
+    'Jonathan Greenberg', 'James Healy'
+  ]
+  spec.email = [
+    'gregory.t.brown@gmail.com', 'brad@bradediger.com',
+    'dnelson77@gmail.com', 'greenberg@entryway.net',
+    'jimmy@deefa.com'
+  ]
   spec.licenses = %w[PRAWN GPL-2.0 GPL-3.0]
-  spec.required_ruby_version = '>= 2.5'
+  spec.required_ruby_version = '>= 2.6'
 
   spec.add_dependency('pdf-reader', '>=1.0', '< 3.0.a')
 
   spec.add_development_dependency('bundler')
+  spec.add_development_dependency('prawn-dev', '~> 0.3.0')
   spec.add_development_dependency('rake')
   spec.add_development_dependency('rspec')
-  spec.add_development_dependency('rubocop', '~> 0.46')
   spec.add_development_dependency('yard')
 
   spec.description = <<~END_DESC

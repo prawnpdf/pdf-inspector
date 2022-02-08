@@ -6,6 +6,7 @@ module PDF
       attr_accessor :extgstates
 
       def initialize
+        super
         @extgstates = []
       end
 

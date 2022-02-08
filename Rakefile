@@ -1,12 +1,7 @@
 # frozen_string_literal: true
 
-require 'bundler'
-Bundler.setup
-
-require 'rake'
-require 'rspec/core/rake_task'
-require 'rubygems/package_task'
-require 'rubocop/rake_task'
+GEMSPEC = File.expand_path('pdf-inspector.gemspec', __dir__)
+require 'prawn/dev/tasks'
 
 task default: %i[spec rubocop]
 
