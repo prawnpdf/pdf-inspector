@@ -6,7 +6,7 @@ describe 'PDF::Inspector::Text' do
   describe '.analyze_file' do
     let(:contents) do
       PDF::Inspector::Text.analyze_file(
-        "#{File.dirname(__FILE__)}/fixtures/text.pdf"
+        File.join(__dir__, 'fixtures', 'text.pdf')
       )
     end
 
