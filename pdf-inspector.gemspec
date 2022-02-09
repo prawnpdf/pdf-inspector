@@ -30,11 +30,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency('pdf-reader', '>=1.0', '< 3.0.a')
 
-  spec.add_development_dependency('bundler')
   spec.add_development_dependency('prawn-dev', '~> 0.3.0')
-  spec.add_development_dependency('rake')
-  spec.add_development_dependency('rspec')
-  spec.add_development_dependency('yard')
 
   spec.description = <<~END_DESC
     This library provides a number of PDF::Reader[0] based tools for use in testing
