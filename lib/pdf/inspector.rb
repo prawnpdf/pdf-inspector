@@ -11,12 +11,12 @@ require 'stringio'
 
 module PDF
   class Inspector
-    def self.analyze(output, *args, &block)
+    def self.analyze(output, *args, **reader_opts, &block)
       if output.is_a?(String)
         output = StringIO.new(output)
       end
       obs = new(*args, &block)
-      PDF::Reader.open(output) do |reader|
+      PDF::Reader.open(output, reader_opts || {}) do |reader|
         reader.pages.each do |page|
           page.walk(obs)
         end
