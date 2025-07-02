@@ -22,7 +22,7 @@ Or put this in your Gemfile, if you use [Bundler][2]:
 
 ```ruby
 group :test do
-  gem 'pdf-inspector', require: "pdf/inspector"
+  gem 'pdf-inspector'
 end
 ```
 
